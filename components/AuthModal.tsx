@@ -10,7 +10,7 @@ import {
 import { useRouter } from "next/navigation";
 
 import Modal from "./Modal";
-import useAuthModal from "@/hooks/UseAuthModal";
+import useAuthModal from "@/hooks/useAuthModal";
 
 const AuthModal = () => {
   const { session } = useSessionContext();
