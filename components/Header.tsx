@@ -39,12 +39,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
   return (
     <div
       className={twMerge(
-        `
-        h-fit 
-        bg-gradient-to-b 
-        from-emerald-800 
-        p-6
-        `,
+        `h-fit bg-gradient-to-b  from-emerald-800 p-6`,
         className
       )}
     >
@@ -52,31 +47,13 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
         <div className="hidden md:flex gap-x-2 items-center">
           <button
             onClick={() => router.back()}
-            className="
-              rounded-full 
-              bg-black 
-              flex 
-              items-center 
-              justify-center 
-              cursor-pointer 
-              hover:opacity-75 
-              transition
-            "
+            className="rounded-full  bg-black flex items-center justify-center cursor-pointer hover:opacity-75 transition"
           >
             <RxCaretLeft className="text-white" size={35} />
           </button>
           <button
             onClick={() => router.forward()}
-            className="
-              rounded-full 
-              bg-black 
-              flex 
-              items-center 
-              justify-center 
-              cursor-pointer 
-              hover:opacity-75 
-              transition
-            "
+            className="rounded-full  bg-black flex items-center justify-center cursor-pointer hover:opacity-75 transition"
           >
             <RxCaretRight className="text-white" size={35} />
           </button>
@@ -84,33 +61,13 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
         <div className="flex md:hidden gap-x-2 items-center">
           <button
             onClick={() => router.push("/")}
-            className="
-              rounded-full 
-              p-2 
-              bg-white 
-              flex 
-              items-center 
-              justify-center 
-              cursor-pointer 
-              hover:opacity-75 
-              transition
-            "
+            className="rounded-full p-2  bg-white flex items-center justify-center cursor-pointer hover:opacity-75 transition"
           >
             <HiHome className="text-black" size={20} />
           </button>
           <button
             onClick={() => router.push("/search")}
-            className="
-              rounded-full 
-              p-2 
-              bg-white 
-              flex 
-              items-center 
-              justify-center 
-              cursor-pointer 
-              hover:opacity-75 
-              transition
-            "
+            className="rounded-full p-2  bg-white flex items-center justify-center cursor-pointer hover:opacity-75 transition"
           >
             <BiSearch className="text-black" size={20} />
           </button>
@@ -133,11 +90,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
               <div>
                 <Button
                   onClick={authModal.onOpen}
-                  className="
-                    bg-transparent 
-                    text-neutral-300 
-                    font-medium
-                  "
+                  className="bg-transparent  text-neutral-300 font-medium"
                 >
                   Sign up
                 </Button>
