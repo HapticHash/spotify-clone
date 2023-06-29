@@ -28,6 +28,7 @@ const SearchInput = () => {
 
   return (
     <Input
+      className="text-base"
       placeholder="What do you want to listen to?"
       value={value}
       onChange={(e) => setValue(e.target.value)}

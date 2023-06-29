@@ -53,6 +53,9 @@ const AuthModal = () => {
               },
             },
           },
+          style: {
+            input: { "font-size": "16px", color: "white" },
+          },
         }}
         theme="dark"
       />
