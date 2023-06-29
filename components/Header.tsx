@@ -11,6 +11,7 @@ import { BiSearch } from "react-icons/bi";
 
 import useAuthModal from "@/hooks/useAuthModal";
 import { useUser } from "@/hooks/useUser";
+import usePlayer from "@/hooks/usePlayer";
 
 import Button from "./Button";
 
@@ -20,6 +21,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ children, className }) => {
+  const player = usePlayer();
   const router = useRouter();
   const authModal = useAuthModal();
 
@@ -28,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
 
   const handleLogout = async () => {
     const { error } = await supabaseClient.auth.signOut();
-    // TODO: Reset any playing songs
+    player.reset();
     router.refresh();
 
     if (error) {
@@ -80,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
               </Button>
               <Button
                 onClick={() => router.push("/account")}
-                className="bg-white px-3 py-3"
+                className="bg-white py-3"
               >
                 <FaUserAlt />
               </Button>
