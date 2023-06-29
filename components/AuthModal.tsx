@@ -54,7 +54,7 @@ const AuthModal = () => {
             },
           },
           style: {
-            input: { "font-size": "16px", color: "white" },
+            input: { fontSize: "16px" },
           },
         }}
         theme="dark"
